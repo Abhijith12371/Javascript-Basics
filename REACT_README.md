@@ -4,15 +4,16 @@ Welcome to the **Complete React Guide**! This document is designed to take you f
 
 ## Table of Contents
 1. [Introduction](#1-introduction)
-2. [JSX & Components](#2-jsx--components)
-3. [Props & State](#3-props--state)
-4. [Hooks (The Core)](#4-hooks-the-core)
-5. [Handling Events](#5-handling-events)
-6. [Conditional Rendering & Lists](#6-conditional-rendering--lists)
-7. [Forms](#7-forms)
-8. [React Router](#8-react-router)
-9. [Context API (State Management)](#9-context-api)
-10. [API Calls](#10-api-calls)
+2. [Project Setup (Vite)](#2-project-setup-vite)
+3. [JSX & Components](#3-jsx--components)
+4. [Props & State](#4-props--state)
+5. [Hooks (The Core)](#5-hooks-the-core)
+6. [Handling Events](#6-handling-events)
+7. [Conditional Rendering & Lists](#7-conditional-rendering--lists)
+8. [Forms](#8-forms)
+9. [React Router](#9-react-router)
+10. [Context API (State Management)](#10-context-api)
+11. [API Calls](#11-api-calls)
 
 ---
 
@@ -23,7 +24,29 @@ React is a JavaScript library for building user interfaces, developed by Faceboo
 
 ---
 
-## 2. JSX & Components
+---
+
+## 2. Project Setup (Vite)
+
+Value Ease and Speed? Use Vite!
+
+### Step 1: Create Project
+Open terminal and run:
+```bash
+npm create vite@latest my-app -- --template react
+```
+
+### Step 2: Install & Run
+```bash
+cd my-app
+npm install
+npm run dev
+```
+Open `http://localhost:5173` to see your app!
+
+---
+
+## 3. JSX & Components
 
 ### JSX (JavaScript XML)
 Allows us to write HTML-like syntax inside JavaScript.
@@ -45,7 +68,7 @@ export default Welcome;
 
 ---
 
-## 3. Props & State
+## 4. Props & State
 
 ### Props (Properties)
 Read-only data passed from parent to child.
@@ -77,7 +100,7 @@ function Counter() {
 
 ---
 
-## 4. Hooks (The Core)
+## 5. Hooks (The Core)
 
 ### `useState`
 Manages state in functional components.
@@ -110,7 +133,7 @@ inputRef.current.focus();
 
 ---
 
-## 5. Handling Events
+## 6. Handling Events
 React events are camelCase (`onClick` instead of `onclick`).
 ```jsx
 function Button() {
@@ -125,7 +148,7 @@ function Button() {
 
 ---
 
-## 6. Conditional Rendering & Lists
+## 7. Conditional Rendering & Lists
 
 ### Conditionals
 Use Ternary Operators or `&&`.
@@ -150,7 +173,7 @@ return (
 
 ---
 
-## 7. Forms
+## 8. Forms
 Controlled components: React controls the input value.
 ```jsx
 const [name, setName] = useState("");
@@ -163,7 +186,7 @@ const [name, setName] = useState("");
 
 ---
 
-## 8. React Router
+## 9. React Router
 Standard routing library for React.
 `npm install react-router-dom`
 
@@ -188,7 +211,7 @@ function App() {
 
 ---
 
-## 9. Context API
+## 10. Context API
 Avoids "Prop Drilling" (passing props down many levels).
 
 1. **Create Context**
@@ -211,7 +234,7 @@ const user = useContext(UserContext); // "Alice"
 
 ---
 
-## 10. API Calls (Best Practice)
+## 11. API Calls (Best Practice)
 Combine `useState` and `useEffect`.
 ```jsx
 const [data, setData] = useState(null);
